@@ -36,7 +36,7 @@ const ProfComponent = () => {
             <p>Check out my</p>
             <div className="social-icons">
               <span>
-                <a href="/">
+                <a href="https://www.instagram.com/varshith__reddi/">
                   <FaInstagramSquare />
                 </a>
               </span>
