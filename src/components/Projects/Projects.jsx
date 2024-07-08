@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import SliderComp from './Slider';
 import { Zoom } from 'react-awesome-reveal';
@@ -14,8 +14,8 @@ const Projects = () => {
             <SliderComp/>
         </Slide>
     </Container>
-  )
-}
+  );
+};
 
 export default Projects;
 
@@ -31,6 +31,12 @@ const Container = styled.div`
     }
     h1{
         font-size: 1.9rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            color: #00ff00; // Change to your preferred hover color
+            transform: scale(1.1); // Slightly enlarges the text on hover
+        }
     }
 
     p{
@@ -42,7 +48,6 @@ const Container = styled.div`
             width: 90%;
         }
     }
-    
-`
+`;
 
-const Slide = styled.div``
+const Slide = styled.div``;

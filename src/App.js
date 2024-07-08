@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import styled from "styled-components";
 import Header from "./components/Banner/Header";
@@ -41,10 +40,9 @@ function App() {
       </LightColor>
       <Clients />
       <LightColor>
-        <ToolsSection>
+        <ToolsSection id="tools">
           <ToolsGrid tools={tools} />
         </ToolsSection>
-        
         <Footer />
       </LightColor>
     </Container>

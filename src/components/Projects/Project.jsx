@@ -1,20 +1,21 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const Project = (props) => {
-    const { img, disc } = props.item;
-  return (
-    <Container className='project'>
-        <img src={img} alt="project" />
-        <div className="disc">
-            <h1>Description</h1>
-            <p>{disc}
-            <a href="https://github.com/amoghvarshith">ProjectLink</a>
-            </p>
-        </div>
-    </Container>
-  )
-}
+    const { img, disc, link } = props.item;
+    return (
+        <Container className='project'>
+            <img src={img} alt="project" />
+            <div className="disc">
+                <h1>Description</h1>
+                <p>
+                    {disc}
+                    <a href={link} target="_blank" rel="noopener noreferrer">ProjectLink</a>
+                </p>
+            </div>
+        </Container>
+    );
+};
 
 export default Project;
 
@@ -52,6 +53,7 @@ const Container = styled.div`
             a{
                 margin-left: 0.4rem;
                 color: red;
+                text-decoration: underline;
             }
         }
     }
@@ -63,5 +65,4 @@ const Container = styled.div`
     :hover > .disc{
         bottom: 0;
     }
-
-`
+`;

@@ -4,7 +4,6 @@ import { MdAlternateEmail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
-import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
 
@@ -15,6 +14,7 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+
   return (
     <Container id="footer">
       <Profile>
@@ -26,7 +26,7 @@ const Footer = () => {
             <h1>Address:</h1>
           </Slide>
           <Slide direction="left">
-            <p>Telangana,Warangal House:No=55-1-1117/2</p>
+            <p>Telangana, Warangal House: No=55-1-1117/2</p>
           </Slide>
         </div>
         <div className="links">
@@ -42,11 +42,9 @@ const Footer = () => {
             </Slide>
           </div>
           <div>
-            <Slide direction="left">
-              <span>
-                <HiOutlineMailOpen />
-              </span>
-            </Slide>
+            <span>
+              <HiOutlineMailOpen />
+            </span>
             <Slide>
               <a href="mailto:2100031388cseh@gmail.com">2100031388cseh@gmail.com</a>
             </Slide>
@@ -71,20 +69,6 @@ const Footer = () => {
                 </a>
               </span>
             </Zoom>
-            {/* <Zoom>
-              <span>
-                <a href="/">
-                  <BsFacebook />
-                </a>
-              </span>
-            </Zoom> */}
-            {/* <Zoom>
-              <span>
-                <a href="/">
-                  <BsSlack />
-                </a>
-              </span>
-            </Zoom> */}
           </div>
         </div>
         <Fade>
@@ -136,12 +120,12 @@ const Container = styled.div`
   @media (max-width: 840px) {
     width: 90%;
   }
-
   @media (max-width: 650px) {
     flex-direction: column;
     gap: 3rem;
   }
 `;
+
 const Profile = styled.div`
   flex: 1;
   .address {
@@ -149,7 +133,6 @@ const Profile = styled.div`
     h1 {
       font-size: 1.2rem;
     }
-
     p {
       width: 60%;
       padding-top: 0.5rem;
@@ -158,13 +141,11 @@ const Profile = styled.div`
       }
     }
   }
-
   .links {
     h1 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
-
     div {
       display: flex;
       align-items: center;
@@ -178,17 +159,14 @@ const Profile = styled.div`
       }
     }
   }
-
   .profiles {
     h1 {
       font-size: 1.2rem;
       padding: 1rem 0;
     }
-
     .icons {
       display: flex;
       align-items: center;
-
       span {
         display: flex;
         align-items: center;
@@ -198,11 +176,9 @@ const Profile = styled.div`
         height: 2rem;
         margin-right: 0.5rem;
         border-radius: 50px;
-
         :hover {
           background-color: orange;
         }
-
         a {
           margin-top: 0.2rem;
           color: #fff;
@@ -211,6 +187,7 @@ const Profile = styled.div`
     }
   }
 `;
+
 const ArrowUp = styled.div`
   width: 2rem;
   height: 2rem;
@@ -228,13 +205,13 @@ const ArrowUp = styled.div`
     top: 16rem;
   }
 `;
+
 const Form = styled.div`
   flex: 1;
   h1 {
     font-size: 1.3rem;
     padding-bottom: 0.7rem;
   }
-
   form {
     background-color: #191923;
     padding: 0.8rem;
@@ -266,7 +243,6 @@ const Form = styled.div`
         padding-top: 0.5rem;
       }
     }
-
     button {
       width: 5rem;
       height: 1.8rem;
