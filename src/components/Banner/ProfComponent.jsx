@@ -1,13 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-// import { AiOutlineInstagram } from "react-icons/ai";
-// import { GiEarthAmerica } from "react-icons/gi";
-import { FaLinkedinIn } from "react-icons/fa";
+import styled, { keyframes } from "styled-components";
 import { Slide } from "react-awesome-reveal";
-import { FiLinkedin } from "react-icons/fi";
 import { FaInstagramSquare } from "react-icons/fa";
-
-
+import { FiLinkedin } from "react-icons/fi";
 
 const ProfComponent = () => {
   const openResume = () => {
@@ -20,19 +15,13 @@ const ProfComponent = () => {
           <h4>
             Hello <span className="green">I'am</span>
           </h4>
-          <h1 className="green">Poreddy Amoghvarshith</h1>
-          <h3>data analytist and web devoloper</h3>
-          <br>
-          </br>
+          <h1>Poreddy Amoghvarshith</h1>
+          <h3>data analyst and web developer</h3>
           <p>
-          Being an experienced individual with expertise in both front-end and back-end programming, the Full Stack Developer is agile. I develop feature-rich web apps that manage every facet of the technology stack. 
+            Being an experienced individual with expertise in both front-end and back-end programming, the Full Stack Developer is agile. I develop feature-rich web apps that manage every facet of the technology stack.
           </p>
           <button onClick={openResume}>My Resume</button>
-          <br>
-            </br>
           <Social>
-            
-         
             <p>Check out my</p>
             <div className="social-icons">
               <span>
@@ -40,11 +29,6 @@ const ProfComponent = () => {
                   <FaInstagramSquare />
                 </a>
               </span>
-              {/* <span>
-                <a href="/">
-                  <GiEarthAmerica />
-                </a>
-              </span> */}
               <span>
                 <a href="https://www.linkedin.com/in/poreddy-amoghvarshith-a63b90225/">
                   <FiLinkedin />
@@ -55,21 +39,26 @@ const ProfComponent = () => {
         </Texts>
       </Slide>
       <Slide direction="right">
-      <Profile>
-  <img
-    src="amoghnew.jpg"
-    alt="profile"
-    width="200"  
-    height="400" 
-  />
-</Profile>
-
+        <Profile>
+          <img src="amoghnew.jpg" alt="profile" />
+        </Profile>
       </Slide>
     </Container>
   );
 };
 
 export default ProfComponent;
+
+const rainbowAnimation = keyframes`
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: blue; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: red; }
+`;
 
 const Container = styled.div`
   display: flex;
@@ -97,6 +86,10 @@ const Texts = styled.div`
     font-size: 2rem;
     font-family: "Secular One", sans-serif;
     letter-spacing: 2px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: ${rainbowAnimation} 5s linear infinite;
   }
   h3 {
     font-weight: 500;

@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { GiCandleFlame } from "react-icons/gi";
+import { FaGrunt } from "react-icons/fa";
 
 const Header = () => {
     const [bar, setBar] = useState(false);
     return (
         <Container bar={bar}>
             <Logo>
-                <span className='white'><GiCandleFlame/></span>
+                <span className='white'><FaGrunt/></span>
                 <h1>Portfolio</h1>
             </Logo>
             <Nav bar={bar}>
                 <NavItems>
-                    <span><a href="#home">Home</a></span>
-                    <span><a href="#service">Services</a></span>
-                    <span><a href="#project">Projects</a></span>
-                    <span><a href="#client"> Certifications</a></span>
-                    <span><a href="#tools"> Tools&Frameworks</a></span>
-                    <span><a href="#footer">ContactMe</a></span>
+                    <NavItem><a href="#home">Home</a></NavItem>
+                    <NavItem><a href="#service">Services</a></NavItem>
+                    <NavItem><a href="#project">Projects</a></NavItem>
+                    <NavItem><a href="#client">Certifications</a></NavItem>
+                    <NavItem><a href="#tools">Tools&Frameworks</a></NavItem>
+                    <NavItem><a href="#footer">ContactMe</a></NavItem>
                 </NavItems>
             </Nav>
             <div onClick={() => setBar(!bar)} className="bars">
@@ -136,35 +137,48 @@ const NavItems = styled.div`
         flex-direction: row;
         gap: 1rem;
     }
+`;
 
-    span {
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 400;
-            position: relative;
+const NavItem = styled.span`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 400ms ease-in-out;
 
-            :before {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: -5px;
-                height: 2px;
-                background-color: #fff;
-                transform: scale(0);
-                transform-origin: right;
-                transition: transform 400ms ease-in-out;
-            }
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        position: relative;
 
-            :hover:before {
-                transform: scale(1);
-                transform-origin: left;
-            }
-
-            :hover {
-                opacity: 0.7;
-            }
+        :before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            background-color: #fff;
+            transform: scale(0);
+            transform-origin: right;
+            transition: transform 400ms ease-in-out;
         }
+
+        :hover:before {
+            transform: scale(1);
+            transform-origin: left;
+        }
+
+        :hover {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+    :hover {
+        background-color: blue;
     }
 `;
